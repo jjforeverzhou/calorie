@@ -1,0 +1,28 @@
+def analyze_food_calorie(food):
+    """
+    This function analyzes the calorie content of a given food.
+    
+    Parameters:
+    food (str): The name of the food to analyze
+    
+    Returns:
+    int: The calorie content of the food
+    """
+    try:
+        # Check if the food is a string
+        if not isinstance(food, str):
+            raise TypeError("Food must be a string")
+        
+        # Perform analysis based on the food
+        if food == "apple":
+            return 52
+        elif food == "banana":
+            return 96
+        elif food == "chocolate":
+            return 546
+        else:
+            return "Unknown food"
+    except TypeError as e:
+        # Log the error
+        print(f"Error: {e}")
+        return 0
